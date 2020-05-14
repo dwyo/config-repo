@@ -1,0 +1,8 @@
+server:
+  port: 8011
+spring:
+  application:
+    name: user-center # 应用名称
+
+# 自定义配置
+name: config-user-center-dev
