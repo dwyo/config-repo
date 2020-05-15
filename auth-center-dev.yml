@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: auth-center # 应用名称
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    user: root
+    password: 123123
 
 # 自定义配置
 name: config-auth-center-dev
@@ -17,3 +22,11 @@ eureka:
     prefer-ip-address:  true  #将自己的ip地址注册到Eureka服务中
     ip-address: ${IP_ADDRESS:127.0.0.1}
     instance-id: ${spring.application.name}:${server.port} #指定实例id
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator    # 访问端点根路径，默认为 /actuator
+      exposure:
+        include: bus-refresh  # 需要开启的端点
+        #exclude:             # 不需要开启的端点
