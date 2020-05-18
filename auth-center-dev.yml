@@ -27,7 +27,7 @@ eureka:
 management:
   endpoints:
     web:
-      base-path: /actuator    # 访问端点根路径，默认为 /actuator
+      base-path: /    # 访问端点根路径，默认为 /actuator
       exposure:
         include: bus-refresh  # 需要开启的端点
         #exclude:             # 不需要开启的端点
