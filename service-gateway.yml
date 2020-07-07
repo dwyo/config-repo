@@ -2,7 +2,7 @@ server:
   port: 8000
 spring:
   application:
-    name: service-gateway # 应用名称
+    name: service-gateway
 
 # 自定义配置
 name: config-service-gateway-dev
