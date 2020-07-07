@@ -3,6 +3,13 @@ server:
 spring:
   application:
     name: user-center # 应用名称
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource      #当前数据源操作类型
+    url: jdbc:mysql://127.0.0.1:3306/spring_cloud?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PRC
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
 
 # 自定义配置
 name: config-user-center-dev
@@ -15,11 +22,3 @@ eureka:
       defaultZone: http://127.0.0.1:1001/eureka/
   instance:
     prefer-ip-address:  true  #将自己的ip地址注册到Eureka服务中
-
-spring:
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource      #当前数据源操作类型
-    url: jdbc:mysql://127.0.0.1:3306/spring_cloud?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PRC
-    username: root
-    password: 1234
-    driver-class-name: com.mysql.cj.jdbc.Driver
